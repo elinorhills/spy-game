@@ -1,0 +1,119 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #87CEEB; /* Sky blue background */
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-image: linear-gradient(to bottom right, #87CEEB, #E0FFFF);
+}
+
+#game-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    color: #333;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+input[type="number"] {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 20px;
+    border: 2px solid #87CEEB;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+button {
+    background-color: #FFD700; /* Gold button color */
+    color: #333;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFA500; /* Orange hover color */
+    transform: translateY(-3px);
+}
+
+#player-role {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+#timer {
+    font-size: 48px;
+    color: #333;
+}
+
+#end-screen h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+#end-screen button {
+    margin-top: 20px;
+    background-color: #4caf50; /* Green for final action */
+    color: #fff;
+    border-radius: 10px;
+}
+
+#player-screen button {
+    display: block;
+    margin: 20px auto;
+}
+
+#player-role, #next-player-btn {
+    text-align: center;
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.dancing-cartoon {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    animation: dance 2s infinite;
+}
+
+@keyframes dance {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.spy-illustration {
+    font-size: 100px;
+    color: #FFD700;
+    display: block;
+    margin: 20px auto;
+    text-shadow: 1px 1px #FF4500;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spyfall Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Spyfall Game</h1>
+        <div id="setup-screen">
+            <label for="player-count">Enter number of players (min 3, max 30):</label>
+            <input type="number" id="player-count" min="3" max="30">
+            <br><br>
+            <label for="round-duration">Set round duration (1-15 minutes):</label>
+            <input type="number" id="round-duration" min="1" max="15">
+            <button id="start-game-btn" onclick="startGame()">Start Game</button>
+        </div>
+        <div id="player-screen" style="display: none;">
+            <p id="player-instruction">Tap the screen to see your role.</p>
+            <button id="show-role-btn" onclick="showRole()">Tap to see your role</button>
+            <p id="player-role" style="display: none;"></p>
+            <span id="spy-illustration" class="spy-illustration" style="display: none;">👀</span>
+            <button id="next-player-btn" onclick="nextPlayer()" style="display: none;">Tap again and pass to the next player</button>
+        </div>
+        <div id="timer-screen" style="display: none;">
+            <h2>Round Timer: <span id="timer"></span></h2>
+            <div class="dancing-cartoon">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <rect x="25" y="25" width="50" height="50" fill="#FF4500" />
+                    <circle cx="35" cy="40" r="5" fill="#000" />
+                    <circle cx="65" cy="40" r="5" fill="#000" />
+                    <path d="M 40 60 Q 50 70, 60 60" stroke="#000" stroke-width="2" fill="transparent" />
+                </svg>
+            </div>
+            <button onclick="skipToEnd()">Skip to End</button> <!-- New "Skip to End" button -->
+        </div>
+        <div id="end-screen" style="display: none;">
+            <h2>Time's up!</h2>
+            <button onclick="revealSpy()">Time to reveal the spy</button>
+            <button onclick="startNewGame()">Start New Game</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
